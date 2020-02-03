@@ -1,0 +1,18 @@
+rootProject.name = 'hediapps-messaging'
+buildscript {
+    repositories {
+        maven {url "https://plugins.gradle.org/m2/"}
+        maven {
+            url HEDIAPPS_MAVEN_REPOSITORY_WRITE
+            credentials {
+                username = HEDIAPPS_MAVEN_REPOSITORY_USER
+                password = HEDIAPPS_MAVEN_REPOSITORY_PASSWORD
+            }
+        }
+    }
+    dependencies {
+        classpath "com.hediapps.plugin:hediapps-gradle-base:0.0.1-SNAPSHOT"
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.8.RELEASE"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:2.2.2.RELEASE"
+    }
+}
